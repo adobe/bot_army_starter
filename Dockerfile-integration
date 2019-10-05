@@ -1,0 +1,19 @@
+FROM elixir:1.8-alpine AS elixir-builder
+
+MAINTAINER Dave Persing <persing@adobe.com>
+
+WORKDIR /opt/app
+
+ENV MIX_ENV=dev
+
+RUN sed -i 's/http\:\/\/dl-cdn.alpinelinux.org/https\:\/\/alpine.global.ssl.fastly.net/g' /etc/apk/repositories \
+  && apk add --update --no-cache bash openssl git \
+  && rm -rf /var/cache/apk/* \
+  && mix local.hex --force \
+  && mix local.rebar --force
+
+COPY . .
+
+RUN mix do deps.get, compile
+
+CMD ["mix", "bots.integration_test", "--workflow", "BotArmyStarter.Trees.SampleLoad", "--custom", "[]"]
