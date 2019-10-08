@@ -50,4 +50,13 @@ defmodule BotArmyStarter.Actions.Sample do
       :fail
     end
   end
+
+  @doc """
+  Validates the guess count (used in integration tests).
+  """
+  def validate_guess_count(%{guess_count: guess_count}, expected)
+      when guess_count == expected,
+      do: :succeed
+
+  def validate_guess_count(_, _), do: :fail
 end

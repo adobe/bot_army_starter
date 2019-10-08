@@ -54,6 +54,8 @@ You can run the bots locally using the two included mix tasks:
 You will see some output.  Press "q" then "enter" to quit the bots and see a summary 
 of their actions.  You can view the full logs at `bot_run.log`.
 
+For convenience, the above command can also be run with `sh lib/trees/run_load.sh` (edit that file to change parameters).
+
 
 #### Integration test runner
 
@@ -64,6 +66,7 @@ This will run all of the tests in parallel, logging output of each test and show
 any errors.  It will complete with a standard exit status of 1 or 0, so you can use 
 this in a build pipeline that depends on the exit status.
 
+For convenience, the above command can also be run with `sh lib/trees/run_integration.sh` (edit that file to change parameters).
 
 ### Deploying
 
