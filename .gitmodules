@@ -1,3 +1,3 @@
 [submodule "vendor/bot_army"]
 	path = vendor/bot_army
-	url = git@git.corp.adobe.com:manticore/bot_army.git
+	url = git@git.corp.adobe.com:BotTestingFramework/bot_army.git
