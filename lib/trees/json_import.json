@@ -1,0 +1,315 @@
+{
+  "version": "0.3.0",
+  "scope": "project",
+  "selectedTree": "a4bab2e0-ce84-4773-8c8a-a632940a521d",
+  "trees": [
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "a4bab2e0-ce84-4773-8c8a-a632940a521d",
+      "title": "Root",
+      "description": "The root of this tree.  You can set tree-wide properties on this node and use them in an action's \"args\" property with this notation: `{{key_name}}`.",
+      "root": "a2254ccd-6747-4749-9e98-b5dfdf4a9f06",
+      "properties": {
+        "magic_number": 4
+      },
+      "nodes": {
+        "a2254ccd-6747-4749-9e98-b5dfdf4a9f06": {
+          "id": "a2254ccd-6747-4749-9e98-b5dfdf4a9f06",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": -276,
+            "y": 0
+          },
+          "children": [
+            "7e122337-45ae-4320-8452-75aaf7ec8e6f",
+            "c6ed3007-71ea-49e1-860a-91bc229c4805",
+            "f82c539c-46c6-4520-938b-b00295711dab",
+            "fe1be13e-ba4c-4023-8f35-1959f1d2b9a1"
+          ]
+        },
+        "7e122337-45ae-4320-8452-75aaf7ec8e6f": {
+          "id": "7e122337-45ae-4320-8452-75aaf7ec8e6f",
+          "name": "420330e3-cb7f-495f-8192-d20ee860da3a",
+          "title": "validate_number",
+          "description": "An instance of the tree.  You can add properties to this node and they will be available in action nodes in this tree (using syntax like `{{key}}`).  Properties defined on this node will overwrite the same property defined on the tree's root node.",
+          "properties": {
+            "magic_number": 4
+          },
+          "display": {
+            "x": -36,
+            "y": -132
+          }
+        },
+        "c6ed3007-71ea-49e1-860a-91bc229c4805": {
+          "id": "c6ed3007-71ea-49e1-860a-91bc229c4805",
+          "name": "runner",
+          "title": "Sample.init_guesses_count()",
+          "description": "An action that calls the function specified in the title (must be in valid Elixir terms).  The title can contain \"template variables\" (like `{{mod}}.rename({{new_name}}, true)`) which will be replaced with corresponding values looked up on the parent tree.",
+          "properties": {},
+          "display": {
+            "x": 0,
+            "y": -48
+          }
+        },
+        "f82c539c-46c6-4520-938b-b00295711dab": {
+          "id": "f82c539c-46c6-4520-938b-b00295711dab",
+          "name": "repeat_until_succeed",
+          "title": "Repeat until succeed",
+          "description": "Takes one child which it repeats until it succeeds.  This node always succeeds.",
+          "properties": {},
+          "display": {
+            "x": -24,
+            "y": 36
+          },
+          "child": "9fa39aaf-4f18-41a7-8535-a00ca84a325f"
+        },
+        "9fa39aaf-4f18-41a7-8535-a00ca84a325f": {
+          "id": "9fa39aaf-4f18-41a7-8535-a00ca84a325f",
+          "name": "98d2ca88-22c6-42dc-8225-7dfb281d92a4",
+          "title": "try_to_guess_number",
+          "description": "An instance of the tree.  You can add properties to this node and they will be available in action nodes in this tree (using syntax like `{{key}}`).  Properties defined on this node will overwrite the same property defined on the tree's root node.",
+          "properties": {
+            "magic_number": 4
+          },
+          "display": {
+            "x": 276,
+            "y": 36
+          }
+        },
+        "fe1be13e-ba4c-4023-8f35-1959f1d2b9a1": {
+          "id": "fe1be13e-ba4c-4023-8f35-1959f1d2b9a1",
+          "name": "wait",
+          "title": "Wait <seconds> seconds",
+          "description": "\"Pauses\" the bot for the number of seconds specified in the \"seconds\" property.  You can specify two numbers (like `1,10`) to wait a random number of seconds between those numbers.",
+          "properties": {
+            "seconds": 60
+          },
+          "display": {
+            "x": -36,
+            "y": 132
+          }
+        }
+      },
+      "display": {
+        "camera_x": 743,
+        "camera_y": 371.5,
+        "camera_z": 1,
+        "x": -432,
+        "y": 0
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "420330e3-cb7f-495f-8192-d20ee860da3a",
+      "title": "validate_number",
+      "description": "The root of this tree.  You can set tree-wide properties on this node and use them in an action's \"args\" property with this notation: `{{key_name}}`.",
+      "root": "72abd835-096d-4875-8740-6f9f038ea509",
+      "properties": {
+        "magic_number": "magic_number"
+      },
+      "nodes": {
+        "72abd835-096d-4875-8740-6f9f038ea509": {
+          "id": "72abd835-096d-4875-8740-6f9f038ea509",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": -240,
+            "y": -120
+          },
+          "children": [
+            "5ac7b524-aaac-4e73-adb9-1b937c121cf3",
+            "6d3fa917-07c9-4583-870f-c02acc1604f2"
+          ]
+        },
+        "5ac7b524-aaac-4e73-adb9-1b937c121cf3": {
+          "id": "5ac7b524-aaac-4e73-adb9-1b937c121cf3",
+          "name": "runner",
+          "title": "Sample.validate_number({{magic_number}})",
+          "description": "An action that calls the function specified in the title (must be in valid Elixir terms).  The title can contain \"template variables\" (like `{{mod}}.rename({{new_name}}, true)`) which will be replaced with corresponding values looked up on the parent tree.",
+          "properties": {},
+          "display": {
+            "x": 60,
+            "y": -180
+          }
+        },
+        "6d3fa917-07c9-4583-870f-c02acc1604f2": {
+          "id": "6d3fa917-07c9-4583-870f-c02acc1604f2",
+          "name": "error",
+          "title": "Error \"The number must be between 1 and 10\"",
+          "description": "Raises an error with the message in the \"msg\" property",
+          "properties": {
+            "msg": "\"The number must be between 1 and 10\""
+          },
+          "display": {
+            "x": 72,
+            "y": -60
+          }
+        }
+      },
+      "display": {
+        "camera_x": 720,
+        "camera_y": 370.5,
+        "camera_z": 1,
+        "x": -408,
+        "y": -120
+      }
+    },
+    {
+      "version": "0.3.0",
+      "scope": "tree",
+      "id": "98d2ca88-22c6-42dc-8225-7dfb281d92a4",
+      "title": "try_to_guess_number",
+      "description": "The root of this tree.  You can set tree-wide properties on this node and use them in an action's \"args\" property with this notation: `{{key_name}}`.",
+      "root": "42f0b96e-685a-4e87-82a1-df329fd742e0",
+      "properties": {},
+      "nodes": {
+        "42f0b96e-685a-4e87-82a1-df329fd742e0": {
+          "id": "42f0b96e-685a-4e87-82a1-df329fd742e0",
+          "name": "select",
+          "title": "Select",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right), succeeding when any one succeeds.  Fails if all fail.",
+          "properties": {},
+          "display": {
+            "x": -300,
+            "y": 0
+          },
+          "children": [
+            "00c7075f-2c86-4f20-980d-e51e0b613f1f",
+            "0571e4fd-917c-45e0-8704-436b37c56007"
+          ]
+        },
+        "0571e4fd-917c-45e0-8704-436b37c56007": {
+          "id": "0571e4fd-917c-45e0-8704-436b37c56007",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": -192,
+            "y": 180
+          },
+          "children": [
+            "715181b9-1df5-42ec-816c-ce691cd8b1ad",
+            "75e159f9-4012-4d95-8a98-0020b9c17084",
+            "7847a282-456e-49ed-835d-c1c17d1178fc",
+            "5c1f68fb-62de-4a44-8fa3-6ae311959767"
+          ]
+        },
+        "715181b9-1df5-42ec-816c-ce691cd8b1ad": {
+          "id": "715181b9-1df5-42ec-816c-ce691cd8b1ad",
+          "name": "runner",
+          "title": "Sample.make_guess()",
+          "description": "An action that calls the function specified in the title (must be in valid Elixir terms).  The title can contain \"template variables\" (like `{{mod}}.rename({{new_name}}, true)`) which will be replaced with corresponding values looked up on the parent tree.",
+          "properties": {},
+          "display": {
+            "x": 12,
+            "y": 72
+          }
+        },
+        "7847a282-456e-49ed-835d-c1c17d1178fc": {
+          "id": "7847a282-456e-49ed-835d-c1c17d1178fc",
+          "name": "runner",
+          "title": "Sample.check_guess(magic_number)",
+          "description": "An action that calls the function specified in the title (must be in valid Elixir terms).  The title can contain \"template variables\" (like `{{mod}}.rename({{new_name}}, true)`) which will be replaced with corresponding values looked up on the parent tree.",
+          "properties": {},
+          "display": {
+            "x": 84,
+            "y": 216
+          }
+        },
+        "00c7075f-2c86-4f20-980d-e51e0b613f1f": {
+          "id": "00c7075f-2c86-4f20-980d-e51e0b613f1f",
+          "name": "sequence",
+          "title": "Sequence",
+          "description": "Takes multiple children and runs them from top to bottom (or left to right).  If any fail, this node fails, if all succeed, this node succeeds.",
+          "properties": {},
+          "display": {
+            "x": -192,
+            "y": -168
+          },
+          "children": [
+            "fe593486-dbf7-4625-8167-ba1aca96ebd0",
+            "410e0968-2640-45a3-ab8f-6a4a12f4ff65"
+          ]
+        },
+        "fe593486-dbf7-4625-8167-ba1aca96ebd0": {
+          "id": "fe593486-dbf7-4625-8167-ba1aca96ebd0",
+          "name": "negate",
+          "title": "Negate",
+          "description": "Takes one child.  If that child succeeds, this node fails, and vice versa.",
+          "properties": {},
+          "display": {
+            "x": -48,
+            "y": -252
+          },
+          "child": "66eb94a7-5f9b-461f-88b0-0b37661c475a"
+        },
+        "66eb94a7-5f9b-461f-88b0-0b37661c475a": {
+          "id": "66eb94a7-5f9b-461f-88b0-0b37661c475a",
+          "name": "runner",
+          "title": "Sample.more_guesses_left?(5)",
+          "description": "An action that calls the function specified in the title (must be in valid Elixir terms).  The title can contain \"template variables\" (like `{{mod}}.rename({{new_name}}, true)`) which will be replaced with corresponding values looked up on the parent tree.",
+          "properties": {},
+          "display": {
+            "x": 240,
+            "y": -252
+          }
+        },
+        "410e0968-2640-45a3-ab8f-6a4a12f4ff65": {
+          "id": "410e0968-2640-45a3-ab8f-6a4a12f4ff65",
+          "name": "log",
+          "title": "Log \"<msg>\"",
+          "description": "Logs the message specified in the \"msg\" property",
+          "properties": {
+            "msg": "Failed to guess the number :("
+          },
+          "display": {
+            "x": 72,
+            "y": -108
+          }
+        },
+        "75e159f9-4012-4d95-8a98-0020b9c17084": {
+          "id": "75e159f9-4012-4d95-8a98-0020b9c17084",
+          "name": "wait",
+          "title": "Wait <seconds> seconds",
+          "description": "\"Pauses\" the bot for the number of seconds specified in the \"seconds\" property.  You can specify two numbers (like `1,10`) to wait a random number of seconds between those numbers.",
+          "properties": {
+            "seconds": 2
+          },
+          "display": {
+            "x": 0,
+            "y": 144
+          }
+        },
+        "5c1f68fb-62de-4a44-8fa3-6ae311959767": {
+          "id": "5c1f68fb-62de-4a44-8fa3-6ae311959767",
+          "name": "log",
+          "title": "Log \"<msg>\"",
+          "description": "Logs the message specified in the \"msg\" property",
+          "properties": {
+            "msg": "I guessed the number!"
+          },
+          "display": {
+            "x": 48,
+            "y": 288
+          }
+        }
+      },
+      "display": {
+        "camera_x": 746,
+        "camera_y": 364.5,
+        "camera_z": 1,
+        "x": -420,
+        "y": 0
+      }
+    }
+  ],
+  "custom_nodes": []
+}
