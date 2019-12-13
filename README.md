@@ -33,6 +33,12 @@ can `mv bot_army_starter your_project/bot_test`.
 
 The behavior trees are located in `/lib/trees` and the actions are in `/lib/actions`.
 
+The sample load tree imports tree data from a json file created with the [Behavior
+Tree Visual
+Editor](https://git.corp.adobe.com/BotTestingFramework/behavior_tree_editor).
+Download the editor from there and open `./lib/trees/sample_load_bt.json` to view and
+edit the tree.
+
 Follow the examples and the docs to build out your trees and actions. You may also
 need to add a `/lib/bot.ex` module if you need to [customize the
 bot](https://git.corp.adobe.com/pages/BotTestingFramework/bot_army/BotArmy.Bot.html#module-extending-the-bot)
