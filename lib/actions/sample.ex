@@ -16,14 +16,18 @@ defmodule BotArmyStarter.Actions.Sample do
   @doc """
   Makes sure the provided number is between 0 and 10 (inclusive)
   """
-  def validate_number(_context, n)
-      when is_integer(n) and n >= 0 and n <= 10,
-      do: :succeed
-
-  def validate_number(_context, _), do: :fail
+  def validate_number(_context, n) do
+    if n >= 0 and n <= 10 do
+      Logger.info("Target number is #{n}")
+      :succeed
+    else
+      Logger.error("Target number must be between 0 and 10, received #{n}")
+      :fail
+    end
+  end
 
   @doc """
-  Chooses a random number between 1 and 10 and saves it to `context.guess`.  Also 
+  Chooses a random number between 1 and 10 and saves it to `context.guess`.  Also
   increments `context.guess_count`.
 
   (Note this will error and the bot will die if `guess_count` has not been set.)
@@ -47,7 +51,7 @@ defmodule BotArmyStarter.Actions.Sample do
     if guess_count < max_guesses do
       :succeed
     else
-      :fail
+      {:error, :out_of_guesses}
     end
   end
 
