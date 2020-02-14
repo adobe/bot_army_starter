@@ -16,4 +16,4 @@ COPY . .
 
 RUN mix do deps.get, compile
 
-CMD ["mix", "bots.integration_test", "--workflow", "BotArmyStarter.Trees.SampleLoad", "--custom", "[]"]
+CMD ["mix", "test"]

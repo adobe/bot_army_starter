@@ -19,7 +19,9 @@ defmodule BotArmyStarter.Trees.SampleLoad do
     # "custom" runtime config is available from `BotArmy.SharedData`
     magic_number = BotArmy.SharedData.get(:magic_number)
 
-    BotArmy.BTParser.parse!("lib/trees/sample_load_bt.json",
+    BotArmy.BTParser.parse!(
+      "lib/trees/sample_load_bt.json",
+      "Root",
       context: %{magic_number: magic_number},
       module_base: BotArmyStarter.Actions
     )

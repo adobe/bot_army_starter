@@ -63,13 +63,9 @@ For convenience, the above command can also be run with `sh lib/trees/run_load.s
 
 ### Integration test runner
 
-`mix bots.integration_test --v --workflow BotArmyStarter.Trees.SampleIntegration --custom '[magic_number: 7]'`
+`mix test`
 
-This will run all of the tests in parallel, logging output of each test and showing
-any errors. It will complete with a standard exit status of 1 or 0, so you can use
-this in a build pipeline that depends on the exit status.
-
-For convenience, the above command can also be run with `sh lib/trees/run_integration.sh` (edit that file to change parameters).
+This will run all of the integration tests in `test/` via ExUnit.
 
 ## Deploying
 
