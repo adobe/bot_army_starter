@@ -20,7 +20,25 @@ defmodule BotArmyStarterTest do
     BehaviorTree.Node.sequence([action(BotArmy.Actions, :log, ["Post all ..."])])
   end
 
+  # these one will only run if you tag a test with `@tag :requires_setup
+  pre_tree "conditional pre tree", context do
+    if context[:requires_setup] do
+      BehaviorTree.Node.sequence([
+        action(BotArmy.Actions, :log, ["special set up..."])
+      ])
+    end
+  end
+
+  post_tree "conditional post tree", context do
+    if context[:requires_setup] do
+      BehaviorTree.Node.sequence([
+        action(BotArmy.Actions, :log, ["special set up..."])
+      ])
+    end
+  end
+
   # @tag :verbose
+  @tag :requires_setup
   test_tree "validate target number", context do
     Node.select([
       action(Sample, :validate_number, [context.magic_number]),
