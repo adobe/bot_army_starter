@@ -10,10 +10,9 @@ defmodule BotArmyStarter.Trees.SampleLoad do
   Validates the supplied number, then tries to guess it up to 5 times, then sleeps
   for a minute.
 
-  This uses the visual behavior tree editor
-  (https://git.corp.adobe.com/BotTestingFramework/behavior_tree_editor) to define the
-  tree (which strips the custom action prefix BotArmyStarter.Actions, so it is added
-  back in).
+  This uses the visual behavior tree editor 
+  (https://github.com/adobe/behavior_tree_editor) to define the tree (which strips 
+  the custom action prefix BotArmyStarter.Actions, so it is added back in).
   """
   def tree() do
     # "custom" runtime config is available from `BotArmy.SharedData`

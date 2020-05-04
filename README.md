@@ -3,28 +3,17 @@
 A starting point for setting up a new bot army. This includes samples for both load
 testing and integration/functional testing.
 
-See [Bot Army
-Docs](https://git.corp.adobe.com/pages/BotTestingFramework/bot_army/readme.html) on
-how to use the bot army.
+See [Bot Army Docs](https://hexdocs.pm/bot_army/1.0.0/readme.html) on how to use the
+bot army.
 
-The [Bot Army
-Cookbook](https://git.corp.adobe.com/pages/BotTestingFramework/bot_army_cookbook/) is
-also useful.
+The [Bot Army Cookbook](https://github.com/adobe/bot_army_cookbook) is also useful.
 
 ## Set up
 
 You will need to have Elixir and Erlang installed on your computer/container
 ([asdf](https://github.com/asdf-vm/asdf-elixir) works well for this).
 
-The `bot_army` dependency is managed via git submodules (since Elixir's dependency
-management tool can't easily access our corp Github, especially in a docker
-container).
-
-You can clone the repo and set up the submodules with `git clone --recurse-submodules git@git.corp.adobe.com:BotTestingFramework/bot_army_starter.git`.
-
-(Alternatively, you can clone the repo like usual and run `git submodule init && git submodule update`.)
-
-Then fetch and compile deps with `mix do deps.get, deps.compile`.
+Fetch and compile deps with `mix do deps.get, deps.compile`.
 
 If you want to write your tests in the same repo as the project they are testing, you
 can `mv bot_army_starter your_project/bot_test`.
@@ -34,14 +23,13 @@ can `mv bot_army_starter your_project/bot_test`.
 The behavior trees are located in `/lib/trees` and the actions are in `/lib/actions`.
 
 The sample load tree imports tree data from a json file created with the [Behavior
-Tree Visual
-Editor](https://git.corp.adobe.com/BotTestingFramework/behavior_tree_editor).
+Tree Visual Editor](https://github.com/adobe/behavior_tree_editor).
 Download the editor from there and open `./lib/trees/sample_load_bt.json` to view and
 edit the tree.
 
 Follow the examples and the docs to build out your trees and actions. You may also
 need to add a `/lib/bot.ex` module if you need to [customize the
-bot](https://git.corp.adobe.com/pages/BotTestingFramework/bot_army/BotArmy.Bot.html#module-extending-the-bot)
+bot](https://hexdocs.pm/bot_army/1.0.0/BotArmy.Bot.html#module-extending-the-bot)
 (to add websocket syncing for example).
 
 Keep your actions atomic, and use the structure of the trees to describe the logic of
