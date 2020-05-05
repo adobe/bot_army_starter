@@ -6,7 +6,8 @@ testing and integration/functional testing.
 See [Bot Army Docs](https://hexdocs.pm/bot_army/1.0.0/readme.html) on how to use the
 bot army.
 
-The [Bot Army Cookbook](https://github.com/adobe/bot_army_cookbook) is also useful.
+The [Bot Army Cookbook](https://opensource.adobe.com/bot_army_cookbook/) is also
+useful.
 
 ## Set up
 
